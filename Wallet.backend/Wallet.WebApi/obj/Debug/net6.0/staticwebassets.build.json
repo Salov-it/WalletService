@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "j/aNTukY3asxSPDAjCM9mv6y6ocq5qN4f2jfo2u06ac=",
+  "Source": "Wallet.WebApi",
+  "BasePath": "_content/Wallet.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
