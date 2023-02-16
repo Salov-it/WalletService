@@ -8,6 +8,7 @@ using static Wallet.WebApi.WeatherForecast;
 using Wallet.WebApi;
 using System.Net.NetworkInformation;
 using Wallet.Application.CQRS.command;
+using Wallet.Application.CQRS.command.UpdateBalance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,27 +18,17 @@ builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
+builder.Services.AddMediatR(typeof(UpdateBalanceCommand)); //регистрация СQRS команд
+
+//проверка базы данных 
+var db = new WalletContext();
+bool isCreated = db.Database.EnsureCreated();
+if (isCreated) Console.WriteLine("База данных была создана");
+else Console.WriteLine("База данных уже существует");
 
 
 
-
-using (var scope = builder.Services.BuildServiceProvider().CreateScope())
-{
-    var serviceProvider = scope.ServiceProvider;
-    try
-    {
-        var context = serviceProvider.GetRequiredService<WalletContext>();
-        Dbinitialization.Initialize(context);
-    }
-    catch (Exception exception) 
-    {
-
-    }
-}
-
-    // Add services to the container.
-
-    builder.Services.AddControllers();
+builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -57,7 +48,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-
 
 app.Run();

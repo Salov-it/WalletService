@@ -19,44 +19,16 @@ namespace Wallet.WebApi.Controllers
         {
             this.mediator = mediator;
         }
-        // GET: api/<CreateWalletСommandController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<CreateWalletСommandController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CreateWalletСommandController>
+      
+        // POST api/<CreateWalletСommand>
         [HttpPost]
-        public async void Post( int s)
+        public async void Post( int Onwerid)
         {
-            var d = new CreateWalletСommand
+            var content = new CreateWalletСommand
             {
-                OwnerId = s
+                OwnerId = Onwerid
             };
-            await mediator.Send(d);
-
-
-        }
-
-
-        // PUT api/<CreateWalletСommandController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CreateWalletСommandController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            await mediator.Send(content);
         }
     }
 }

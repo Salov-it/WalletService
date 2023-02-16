@@ -30,6 +30,9 @@
             "projectReferences": {
               "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
                 "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
+              },
+              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
+                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj"
               }
             }
           }
@@ -164,9 +167,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {
-                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj"
-              },
               "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
                 "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
               }
@@ -184,6 +184,10 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
