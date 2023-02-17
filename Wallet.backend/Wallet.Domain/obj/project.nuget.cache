@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kDYfEyn+DmOjQxjfwm4cr42NmYmfWfXF+7cpFyO+73j7aBgWk2ubRsWbUuFF8FoNq7P7dCLd9kucMdLxiMTn3w==",
+  "dgSpecHash": "aQmNpbP/IIZuCBoJFkxrCXzXlaRkIU2kVgKdW4yw6L0iuvPHWzGzXfeG87kKkqPCeHvkTEfLCn16tW1shCYlyQ==",
   "success": true,
-  "projectFilePath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj",
+  "projectFilePath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

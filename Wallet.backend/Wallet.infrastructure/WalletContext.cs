@@ -1,20 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Wallet.Domain;
+using WalletService.Application.Interface;
+using WalletService.Domain;
 
 
 
-namespace Wallet.infrastructure
+namespace WalletService.infrastructure
 {
-    public class WalletContext : DbContext
+    public class WalletContext : DbContext, IWalletContext
     {
       
-       public DbSet<Wallets> wallets { get; set; }
+       public DbSet<Wallet> Wallets { get; set; }
        public WalletContext() => Database.EnsureCreated();
-
-       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       protected override void OnModelCreating(ModelBuilder modelBuilder)
        {
-            optionsBuilder.UseSqlite("Data Source=WalletBase.db");
+            modelBuilder.ApplyConfiguration(new Config());
+            base.OnModelCreating(modelBuilder);
        }
-
     }
 }

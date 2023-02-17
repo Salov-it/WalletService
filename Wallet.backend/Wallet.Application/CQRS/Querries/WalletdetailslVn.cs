@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Wallet.Domain;
-using Wallet.Application;
+using WalletService.Domain;
+using WalletService.Application;
 
-namespace Wallet.Application.CQRS.Querries
+namespace WalletService.Application.CQRS.Querries
 {
     public class WalletdetailslVn : IMapWith<WalletdetailslVn>
     {
@@ -14,7 +14,7 @@ namespace Wallet.Application.CQRS.Querries
 
         public void Mapping(Profile profile)
         {
-            profile.CreateMap<Wallets, WalletdetailslVn>()
+            profile.CreateMap<Wallet, WalletdetailslVn>()
                 .ForMember(noteVm => noteVm.id, opt => opt.MapFrom(note => note.id))
                 .ForMember(noteVm => noteVm.ownerId, opt => opt.MapFrom(note => note.ownerId))
                 .ForMember(noteVm => noteVm.balance, opt => opt.MapFrom(note => note.balance))

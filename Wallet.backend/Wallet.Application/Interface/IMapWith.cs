@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Wallet.Application
+namespace WalletService.Application
 {
     public interface IMapWith<T>
     {

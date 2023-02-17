@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {}
+    "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {}
   },
   "projects": {
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {
+    "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj",
+        "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj",
         "projectName": "Wallet.Application",
-        "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj",
-        "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\obj\\",
+        "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj",
+        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
+        "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +32,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
-                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
+              "C:\\EVO\\Services\\WalletService\\Wallet.backend\\WalletService.Domain\\WalletService.Domain.csproj": {
+                "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\WalletService.Domain\\WalletService.Domain.csproj"
               },
-              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
-                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj"
+              "C:\\EVO\\Services\\WalletService\\Wallet.backend\\WalletService.infrastructure\\WalletService.infrastructure.csproj": {
+                "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\WalletService.infrastructure\\WalletService.infrastructure.csproj"
               }
             }
           }
@@ -49,11 +53,11 @@
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[12.0.1, )"
             },
             "MediatR": {
               "target": "Package",
-              "version": "[11.1.0, )"
+              "version": "[12.0.0, )"
             },
             "MediatR.Extensions": {
               "target": "Package",
@@ -70,134 +74,6 @@
             "System.Collections": {
               "target": "Package",
               "version": "[4.3.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj",
-        "projectName": "Wallet.Domain",
-        "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj",
-        "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
-        "projectName": "Wallet.infrastructure",
-        "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
-        "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
-                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[7.0.3, )"
             }
           },
           "imports": [
