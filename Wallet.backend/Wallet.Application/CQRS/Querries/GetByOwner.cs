@@ -3,7 +3,8 @@ using WalletService.Domain;
 
 namespace WalletService.Application.CQRS.Querries
 {
-    public class GetWalletsQuery : IRequest<List<Wallet>>
+    public class GetByOwner : IRequest<Wallet>
     {
+        public int OwnerId { get; set; }
     }
 }

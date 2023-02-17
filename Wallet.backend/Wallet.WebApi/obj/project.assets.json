@@ -1788,50 +1788,50 @@
           }
         }
       },
-      "Wallet.Application/1.0.0": {
+      "WalletService.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AutoMapper": "9.0.0",
-          "MediatR": "11.1.0",
+          "AutoMapper": "12.0.1",
+          "MediatR": "12.0.0",
           "MediatR.Extensions": "0.6.0",
           "MediatR.Extensions.Autofac.DependencyInjection": "9.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "System.Collections": "4.3.0",
-          "Wallet.Domain": "1.0.0",
-          "Wallet.infrastructure": "1.0.0"
+          "WalletService.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Wallet.Application.dll": {}
+          "bin/placeholder/WalletService.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Wallet.Application.dll": {}
+          "bin/placeholder/WalletService.Application.dll": {}
         }
       },
-      "Wallet.Domain/1.0.0": {
+      "WalletService.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Wallet.Domain.dll": {}
+          "bin/placeholder/WalletService.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Wallet.Domain.dll": {}
+          "bin/placeholder/WalletService.Domain.dll": {}
         }
       },
-      "Wallet.infrastructure/1.0.0": {
+      "WalletService.infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.3",
-          "Wallet.Domain": "1.0.0"
+          "WalletService.Application": "1.0.0",
+          "WalletService.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Wallet.infrastructure.dll": {}
+          "bin/placeholder/WalletService.infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Wallet.infrastructure.dll": {}
+          "bin/placeholder/WalletService.infrastructure.dll": {}
         }
       }
     }
@@ -4761,20 +4761,20 @@
         "version.txt"
       ]
     },
-    "Wallet.Application/1.0.0": {
+    "WalletService.Application/1.0.0": {
       "type": "project",
-      "path": "../Wallet.Application/Wallet.Application.csproj",
-      "msbuildProject": "../Wallet.Application/Wallet.Application.csproj"
+      "path": "../Wallet.Application/WalletService.Application.csproj",
+      "msbuildProject": "../Wallet.Application/WalletService.Application.csproj"
     },
-    "Wallet.Domain/1.0.0": {
+    "WalletService.Domain/1.0.0": {
       "type": "project",
-      "path": "../Wallet.Domain/Wallet.Domain.csproj",
-      "msbuildProject": "../Wallet.Domain/Wallet.Domain.csproj"
+      "path": "../Wallet.Domain/WalletService.Domain.csproj",
+      "msbuildProject": "../Wallet.Domain/WalletService.Domain.csproj"
     },
-    "Wallet.infrastructure/1.0.0": {
+    "WalletService.infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Wallet.infrastructure/Wallet.infrastructure.csproj",
-      "msbuildProject": "../Wallet.infrastructure/Wallet.infrastructure.csproj"
+      "path": "../Wallet.infrastructure/WalletService.infrastructure.csproj",
+      "msbuildProject": "../Wallet.infrastructure/WalletService.infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4786,25 +4786,30 @@
       "Microsoft.EntityFrameworkCore >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.3",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "Wallet.Application >= 1.0.0",
-      "Wallet.Domain >= 1.0.0",
-      "Wallet.infrastructure >= 1.0.0"
+      "WalletService.Application >= 1.0.0",
+      "WalletService.Domain >= 1.0.0",
+      "WalletService.infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salov\\.nuget\\packages\\": {}
+    "C:\\Users\\sasha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\Wallet.WebApi.csproj",
-      "projectName": "Wallet.WebApi",
-      "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\Wallet.WebApi.csproj",
-      "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-      "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\obj\\",
+      "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
+      "projectName": "WalletService.WebApi",
+      "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
+      "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
+      "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4818,14 +4823,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj"
             },
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj"
             },
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj"
             }
           }
         }
@@ -4899,6 +4904,15 @@
       "warningLevel": 1,
       "message": "Пакет \"MediatR.Extensions 0.6.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "MediatR.Extensions",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Обнаружено понижение версии пакета MediatR с 12.0.0 на 11.1.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n WalletService.WebApi -> WalletService.Application -> MediatR (>= 12.0.0) \r\n WalletService.WebApi -> MediatR (>= 11.1.0)",
+      "libraryId": "MediatR",
       "targetGraphs": [
         "net6.0"
       ]

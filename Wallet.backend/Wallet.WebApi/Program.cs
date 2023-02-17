@@ -1,8 +1,8 @@
 
 using MediatR;
-using Wallet.Application.CQRS.command;
-using Wallet.Application.CQRS.command.UpdateBalance;
-using Wallet.Application.CQRS.Querries;
+//using Wallet.Application.CQRS.command.Create;
+//using Wallet.Application.CQRS.command.UpdateBalance;
+//using Wallet.Application.CQRS.Querries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,12 +10,12 @@ builder.Services.AddMediatR(typeof(Program)); //Регистрация медиатра
 
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
-builder.Services.AddMediatR(typeof(UpdateBalanceCommand));  //регистрация СQRS команд
+//builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
-builder.Services.AddMediatR(typeof(GetWalletsQuery));  //регистрация СQRS команд
+//builder.Services.AddMediatR(typeof(UpdateBalanceCommand));  //регистрация СQRS команд
 
+//builder.Services.AddMediatR(typeof(GetWalletsQuery));  //регистрация СQRS команд
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,9 +32,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseHttpsRedirection();
+//.UseAuthorization();
 
 app.MapControllers();
 

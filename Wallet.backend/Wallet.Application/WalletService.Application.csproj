@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.0.0" />
     <PackageReference Include="MediatR.Extensions" Version="0.6.0" />
     <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="9.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wallet.Domain\Wallet.Domain.csproj" />
-    <ProjectReference Include="..\Wallet.infrastructure\Wallet.infrastructure.csproj" />
+    <ProjectReference Include="..\Wallet.Domain\WalletService.Domain.csproj" />
   </ItemGroup>
+
 
 </Project>

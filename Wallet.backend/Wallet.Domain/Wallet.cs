@@ -1,6 +1,6 @@
-﻿namespace Wallet.Domain
+﻿namespace WalletService.Domain
 {
-    public class Wallets
+    public class Wallet
     {
         public int id { get; set; }
         public int ownerId { get; set; }

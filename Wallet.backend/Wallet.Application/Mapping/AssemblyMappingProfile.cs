@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using System.Reflection;
 
-namespace Wallet.Application.Mapping
+namespace WalletService.Application.Mapping
 {
     public class AssemblyMappingProfile : Profile
     {

@@ -1,25 +1,33 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MediatR;
-using Wallet.Domain;
-using Wallet.infrastructure;
+using WalletService.Domain;
 using System.Data;
+using WalletService.Application.Interface;
 
-
-namespace Wallet.Application.CQRS.command.UpdateBalance
+namespace WalletService.Application.CQRS.command.UpdateBalance
 {
-    public class UpdateBalanceHandler : IRequestHandler<UpdateBalanceCommand, int>
+    public class UpdateBalanceHandler : IRequestHandler<UpdateBalanceCommand, Wallet>
     {
-       
-        public async Task<int> Handle(UpdateBalanceCommand request, CancellationToken cancellationToken)
+
+        private IWalletContext _context;
+        public UpdateBalanceHandler(IWalletContext context) {
+            _context = context;
+        }
+        public async Task<Wallet> Handle(UpdateBalanceCommand request, CancellationToken cancellationToken)
         {
-             var db = new WalletContext();
-             var content = db.wallets.Find(request.id);
+             var content = _context.Wallets.Find(request.id);
+             
+             if (content == null) 
+             {
+                //// ERROR
+                return null;
+             }
 
              content.balance = request.balance;
              content.updatedAt = DateTime.Now.ToLocalTime().ToString();
-             db.SaveChanges();
+             await _context.SaveChangesAsync(cancellationToken);
             
-            return 1;
+            return content;
         }
     }
 }

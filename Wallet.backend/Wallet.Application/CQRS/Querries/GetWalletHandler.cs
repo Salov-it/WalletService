@@ -1,28 +1,22 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Wallet.Application.CQRS.command;
-using Wallet.infrastructure;
+using WalletService.Application.Interface;
+using WalletService.Domain;
 
-namespace Wallet.Application.CQRS.Querries
+namespace WalletService.Application.CQRS.Querries
 {
-    public class GetWalletHandler : IRequestHandler<GetWalletsQuery, WalletdetailslVn>
+    public class GetWalletHandler : IRequestHandler<GetWalletsQuery, List<Wallet>>
     {
-        
-        public readonly IMapper mapper;
-        
-        public async Task<WalletdetailslVn> Handle(GetWalletsQuery request, CancellationToken cancellationToken)
+        private IWalletContext _context;
+        public GetWalletHandler(IWalletContext context)
         {
-           
+            _context = context;
+        }
 
-
-            return ;
+        public async Task<List<Wallet>> Handle(GetWalletsQuery request, CancellationToken cancellationToken)
+        {
+            return await _context.Wallets.ToListAsync(cancellationToken);
         }
     }
 }

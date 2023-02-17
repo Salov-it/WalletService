@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {}
+    "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
+    "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj",
-        "projectName": "Wallet.Domain",
-        "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj",
-        "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\obj\\",
+        "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
+        "projectName": "WalletService.Domain",
+        "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
+        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
+        "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,17 +63,21 @@
         }
       }
     },
-    "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
+    "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
+        "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
         "projectName": "Wallet.infrastructure",
-        "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
-        "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\obj\\",
+        "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\Wallet.infrastructure.csproj",
+        "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
+        "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +91,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj": {
-                "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\Wallet.Domain.csproj"
+              "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj": {
+                "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj"
               }
             }
           }
