@@ -3,7 +3,7 @@ using Wallet.Domain;
 using Wallet.infrastructure;
 namespace Wallet.Application.CQRS.command
 {
-    internal class CreateWalletCommandHandler: IRequestHandler<CreateWalletСommand,int>
+    public class CreateWalletCommandHandler: IRequestHandler<CreateWalletСommand,int>
     {
         
         public async Task<int> Handle(CreateWalletСommand request, CancellationToken cancellationToken)
@@ -15,8 +15,7 @@ namespace Wallet.Application.CQRS.command
                 ownerId = request.OwnerId,
                 balance = 0,
                 createdAt = DateTime.Now.ToLocalTime().ToString(),
-                updatedAt = DateTime.Now.ToLocalTime().ToString(),
-
+                
             };
        
             db.Add(content);

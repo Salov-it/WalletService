@@ -1,14 +1,8 @@
-using Autofac.Core;
+
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
-using System.Reflection;
-using Wallet.Application;
-using Wallet.infrastructure;
-using static Wallet.WebApi.WeatherForecast;
-using Wallet.WebApi;
-using System.Net.NetworkInformation;
 using Wallet.Application.CQRS.command;
 using Wallet.Application.CQRS.command.UpdateBalance;
+using Wallet.Application.CQRS.Querries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,14 +12,9 @@ builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
-builder.Services.AddMediatR(typeof(UpdateBalanceCommand)); //регистрация СQRS команд
+builder.Services.AddMediatR(typeof(UpdateBalanceCommand));  //регистрация СQRS команд
 
-//проверка базы данных 
-var db = new WalletContext();
-bool isCreated = db.Database.EnsureCreated();
-if (isCreated) Console.WriteLine("База данных была создана");
-else Console.WriteLine("База данных уже существует");
-
+builder.Services.AddMediatR(typeof(GetWalletsQuery));  //регистрация СQRS команд
 
 
 builder.Services.AddControllers();

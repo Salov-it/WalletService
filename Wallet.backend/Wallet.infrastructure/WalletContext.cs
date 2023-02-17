@@ -2,11 +2,12 @@
 using Wallet.Domain;
 
 
+
 namespace Wallet.infrastructure
 {
     public class WalletContext : DbContext
     {
-        
+      
        public DbSet<Wallets> wallets { get; set; }
        public WalletContext() => Database.EnsureCreated();
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s0tubW11wlSXsC7luZ0tpwCJ8B/Ezu9JA0rsf5HacSZGB5j2bbVkaIMnemH49DQ+eAe376WgG763d6i/Z39DDQ==",
+  "dgSpecHash": "o1e6Lh4OK0V3z8DXqr/QG3zj+V/Ajbv8416umV4/m6mM+K+Wmq9IRnQ1RmyGClO46Lvc17gff4qxbqpHEBxJlQ==",
   "success": true,
   "projectFilePath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\Wallet.Application.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\salov\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\salov\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",

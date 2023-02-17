@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "h6PbG3SbtXMm1Zn7GRZVUXPg63CZ+w1vNvQUdRA1nuMapRDYegw5EDI0fskeLOS6t0VJ0fskLVKpY9R4OSqdVQ==",
+  "dgSpecHash": "Qf9TNyf2OkYaOLAzHG34mLTfeswn6FZXrb9osvLXIDS2O21jQButd/bViKgUVbJBq+MoffKiTYn2VG2fxNTTsw==",
   "success": true,
   "projectFilePath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\Wallet.WebApi.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Users\\salov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\salov\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
     "C:\\Users\\salov\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
