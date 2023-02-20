@@ -1,5 +1,5 @@
 using MediatR;
-using WalletService.Application.CQRS.command.Create;
+//using WalletService.Application.CQRS.command.Create;
 
 //using Wallet.Application.CQRS.command.Create;
 //using Wallet.Application.CQRS.command.UpdateBalance;
@@ -11,7 +11,7 @@ builder.Services.AddMediatR(typeof(Program)); //Регистрация медиатра
 
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
+//builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
 
 builder.Services.AddControllers();

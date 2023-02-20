@@ -18,9 +18,10 @@ namespace WalletService.Application.Common.Behaviors
 
 
         public Task<TResponse> Handle(
-            TRequest request, 
-            RequestHandlerDelegate<TResponse> next, 
-            CancellationToken cancellationToken)
+            TRequest request,
+            RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken
+            )
         {
            var context = new ValidationContext<TRequest>(request);
             var failtures = _validators
@@ -32,7 +33,7 @@ namespace WalletService.Application.Common.Behaviors
             {
                 throw new ValidationException(failtures);
             }
-            return next;
+            return next();
         }
     }
 }
