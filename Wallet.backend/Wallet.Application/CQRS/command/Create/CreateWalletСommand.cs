@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using WalletService.Domain;
 
-namespace WalletService.Application.CQRS.command.Create
+namespace WalletService.Application.CQRS.Command.Create
 {
     public class CreateWalletСommand : IRequest<Wallet>
     {

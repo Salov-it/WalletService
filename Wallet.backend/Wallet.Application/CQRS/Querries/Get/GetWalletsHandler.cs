@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using WalletService.Application.Interface;
 using WalletService.Domain;
 
-namespace WalletService.Application.CQRS.Querries
+namespace WalletService.Application.CQRS.Querries.Get
 {
-    public class GetWalletHandler : IRequestHandler<GetWalletsQuery, List<Wallet>>
+    public class GetWalletsHandler : IRequestHandler<GetWalletsQuery, List<Wallet>>
     {
-        private IWalletContext _context;
-        public GetWalletHandler(IWalletContext context)
+        private readonly IWalletContext _context;
+        public GetWalletsHandler(IWalletContext context)
         {
             _context = context;
         }

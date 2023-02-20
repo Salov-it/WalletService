@@ -2,7 +2,7 @@
 using WalletService.Domain;
 
 
-namespace WalletService.Application.CQRS.command.UpdateBalance
+namespace WalletService.Application.CQRS.Command.UpdateBalance
 {
     public class UpdateBalanceCommand : IRequest<Wallet>
     {

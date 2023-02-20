@@ -13,7 +13,7 @@ namespace WalletService.Application.CQRS.Command.Create
         {
             _walletContext = context;
         }
-        private IWalletContext _walletContext;
+        private readonly IWalletContext _walletContext;
         public async Task<Wallet> Handle(CreateWalletСommand request, CancellationToken cancellationToken)
         {
             var content = new Wallet
