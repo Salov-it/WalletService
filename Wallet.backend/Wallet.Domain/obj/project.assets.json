@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sasha\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\salov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
+      "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
       "projectName": "WalletService.Domain",
-      "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
-      "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
-      "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\obj\\",
+      "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj",
+      "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
+      "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
