@@ -1,5 +1,9 @@
 
+using Autofac.Core;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
+using WalletService.Application.CQRS.command.Create;
+using WalletService.infrastructure;
 //using Wallet.Application.CQRS.command.Create;
 //using Wallet.Application.CQRS.command.UpdateBalance;
 //using Wallet.Application.CQRS.Querries;
@@ -10,8 +14,8 @@ builder.Services.AddMediatR(typeof(Program)); //Регистрация медиатра
 
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
-//builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
 //builder.Services.AddMediatR(typeof(UpdateBalanceCommand));  //регистрация СQRS команд
 

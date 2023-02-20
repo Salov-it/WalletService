@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Wallet.Application.CQRS.command;
-using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics;
-using System.Net.NetworkInformation;
+using WalletService.Domain;
+using WalletServic.Application;
+using WalletService.infrastructure;
+using WalletService.Application.CQRS.command.Create;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,13 +23,12 @@ namespace Wallet.WebApi.Controllers
       
         // POST api/<CreateWalletСommand>
         [HttpPost]
-        public async void Post( int Onwerid)
+        public async void Post(int s)
         {
             var content = new CreateWalletСommand
             {
-                OwnerId = Onwerid
+                OwnerId = s,
             };
-            await mediator.Send(content);
         }
     }
 }
