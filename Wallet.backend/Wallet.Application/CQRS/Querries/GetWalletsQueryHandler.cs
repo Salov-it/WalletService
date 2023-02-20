@@ -10,6 +10,7 @@ namespace WalletService.Application.CQRS.Querries
     public class GetWalletsQueryHandler : IRequestHandler<GetWalletsQuery, List<Wallet>>
     {
         private IWalletContext _context;
+        private MediatR.IMediator _mediator;
     
         public GetWalletsQueryHandler(IWalletContext context)
         {
@@ -24,7 +25,7 @@ namespace WalletService.Application.CQRS.Querries
             {
                 return null;
             }
-
+            
             return content;
         }
     }

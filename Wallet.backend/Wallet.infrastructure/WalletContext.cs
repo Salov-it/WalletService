@@ -17,5 +17,7 @@ namespace WalletService.infrastructure
             modelBuilder.ApplyConfiguration(new Config());
             base.OnModelCreating(modelBuilder);
        }
+
+       
     }
 }

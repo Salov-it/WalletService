@@ -15,6 +15,7 @@ namespace WalletService.infrastructure
         {
             builder.HasIndex(w => w.id).IsUnique();
             builder.HasKey(w=> w.id);
+            
         }
     }
 }

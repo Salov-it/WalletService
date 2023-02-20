@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Wallet.Application.CQRS.command.UpdateBalance;
 
 
 namespace Wallet.WebApi.Controllers
@@ -17,17 +16,7 @@ namespace Wallet.WebApi.Controllers
            this.mediator = mediator;
          }
 
-         // POST api/<UpdateBalance>
-         [HttpPost]
-         public async void Post(int balance, int id)
-         {
-           var content = new UpdateBalanceCommand
-           {
-             balance= balance,
-             id = id
-           };
-           await mediator.Send(content);
-         }
+        
 
         
     }
