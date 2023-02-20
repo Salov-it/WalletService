@@ -10,8 +10,7 @@ namespace WalletService.infrastructure
     {
        public DbSet<Wallet> Wallets { get; set; }
 
-
-
+       public WalletContext(DbContextOptions<WalletContext> options) : base(options) { }
        protected override void OnModelCreating(ModelBuilder modelBuilder)
        {
             modelBuilder.ApplyConfiguration(new Config());

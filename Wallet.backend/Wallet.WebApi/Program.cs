@@ -1,9 +1,6 @@
-
-using Autofac.Core;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using WalletService.Application.CQRS.command.Create;
-using WalletService.infrastructure;
+
 //using Wallet.Application.CQRS.command.Create;
 //using Wallet.Application.CQRS.command.UpdateBalance;
 //using Wallet.Application.CQRS.Querries;
@@ -16,10 +13,6 @@ builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddMediatR(typeof(CreateWalletСommand)); //регистрация СQRS команд
 
-
-//builder.Services.AddMediatR(typeof(UpdateBalanceCommand));  //регистрация СQRS команд
-
-//builder.Services.AddMediatR(typeof(GetWalletsQuery));  //регистрация СQRS команд
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

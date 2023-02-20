@@ -2,22 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Autofac/6.5.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "4.7.1"
-        },
-        "compile": {
-          "lib/net6.0/Autofac.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Autofac.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "AutoMapper/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -136,35 +120,6 @@
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "MediatR.Extensions/0.6.0": {
-        "type": "package",
-        "dependencies": {
-          "MediatR": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/MediatR.Extensions.dll": {}
-        },
-        "runtime": {
-          "lib/net45/MediatR.Extensions.dll": {}
-        }
-      },
-      "MediatR.Extensions.Autofac.DependencyInjection/10.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Autofac": "6.5.0",
-          "MediatR": "12.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
-            "related": ".pdb"
           }
         }
       },
@@ -1453,10 +1408,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "FluentValidation": "11.5.1",
           "FluentValidation.DependencyInjectionExtensions": "11.5.1",
           "MediatR": "12.0.0",
-          "MediatR.Extensions": "0.6.0",
-          "MediatR.Extensions.Autofac.DependencyInjection": "10.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "System.Collections": "4.3.0",
           "WalletService.Domain": "1.0.0"
@@ -1481,27 +1435,6 @@
     }
   },
   "libraries": {
-    "Autofac/6.5.0": {
-      "sha512": "sm6HWWBDEoTPGXeyOchMygJ/7L89VxmVH72BFxakG88J34AVjA8RMi5jbv3PdpUtXI/d9ZLKOaxCmOSIo2K4aA==",
-      "type": "package",
-      "path": "autofac/6.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "autofac.6.5.0.nupkg.sha512",
-        "autofac.nuspec",
-        "icon.png",
-        "lib/net5.0/Autofac.dll",
-        "lib/net5.0/Autofac.xml",
-        "lib/net6.0/Autofac.dll",
-        "lib/net6.0/Autofac.xml",
-        "lib/netstandard2.0/Autofac.dll",
-        "lib/netstandard2.0/Autofac.xml",
-        "lib/netstandard2.1/Autofac.dll",
-        "lib/netstandard2.1/Autofac.xml"
-      ]
-    },
     "AutoMapper/12.0.1": {
       "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "type": "package",
@@ -1621,32 +1554,6 @@
         "lib/netstandard2.0/MediatR.Contracts.xml",
         "mediatr.contracts.2.0.0.nupkg.sha512",
         "mediatr.contracts.nuspec"
-      ]
-    },
-    "MediatR.Extensions/0.6.0": {
-      "sha512": "YIFb8hW1JBTAV2teZrUfB+u3S5+900s/IiHJMDdVmkHjmpG4V29iRK8RAtcsOHDZ6xSVowFCm8D8+6mQbSwhgA==",
-      "type": "package",
-      "path": "mediatr.extensions/0.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/MediatR.Extensions.dll",
-        "mediatr.extensions.0.6.0.nupkg.sha512",
-        "mediatr.extensions.nuspec"
-      ]
-    },
-    "MediatR.Extensions.Autofac.DependencyInjection/10.0.0": {
-      "sha512": "3p8Wx0Er/naxf2MMODLQnWBgYqwyN/64PxVgFvpG4a3vHEIHts1H1cD3p0lQsWYvmpUwrIFN/dpf+RWp3hz5iA==",
-      "type": "package",
-      "path": "mediatr.extensions.autofac.dependencyinjection/10.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll",
-        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.pdb",
-        "mediatr.extensions.autofac.dependencyinjection.10.0.0.nupkg.sha512",
-        "mediatr.extensions.autofac.dependencyinjection.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -4212,17 +4119,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Пакет \"MediatR.Extensions 0.6.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
-      "libraryId": "MediatR.Extensions",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

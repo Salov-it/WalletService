@@ -3,7 +3,7 @@ using WalletService.Application.Interface;
 using WalletService.Domain;
 
 
-namespace WalletService.Application.CQRS.command.Create
+namespace WalletService.Application.CQRS.Command.Create
 {
     public class CreateWalletCommandHandler : IRequestHandler<CreateWalletСommand, Wallet>
     {
