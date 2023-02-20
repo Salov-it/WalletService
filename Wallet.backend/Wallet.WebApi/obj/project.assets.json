@@ -78,6 +78,36 @@
           }
         }
       },
+      "FluentValidation/11.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.5.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "11.5.1",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MediatR/12.0.0": {
         "type": "package",
         "dependencies": {
@@ -121,19 +151,19 @@
           "lib/net45/MediatR.Extensions.dll": {}
         }
       },
-      "MediatR.Extensions.Autofac.DependencyInjection/9.2.0": {
+      "MediatR.Extensions.Autofac.DependencyInjection/10.0.0": {
         "type": "package",
         "dependencies": {
           "Autofac": "6.5.0",
-          "MediatR": "11.1.0"
+          "MediatR": "12.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/MediatR.Extensions.Autofac.DependencyInjection.dll": {
+          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
             "related": ".pdb"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/MediatR.Extensions.Autofac.DependencyInjection.dll": {
+          "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll": {
             "related": ".pdb"
           }
         }
@@ -1081,6 +1111,41 @@
           }
         }
       },
+      "Npgsql/6.0.9": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.12",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.12",
+          "Npgsql": "6.0.8"
+        },
+        "compile": {
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -1797,9 +1862,10 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "FluentValidation.DependencyInjectionExtensions": "11.5.1",
           "MediatR": "12.0.0",
           "MediatR.Extensions": "0.6.0",
-          "MediatR.Extensions.Autofac.DependencyInjection": "9.2.0",
+          "MediatR.Extensions.Autofac.DependencyInjection": "10.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "System.Collections": "4.3.0",
           "WalletService.Domain": "1.0.0"
@@ -1828,6 +1894,8 @@
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.3",
+          "Npgsql": "6.0.9",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.8",
           "WalletService.Application": "1.0.0",
           "WalletService.Domain": "1.0.0"
         },
@@ -1915,6 +1983,46 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "FluentValidation/11.5.1": {
+      "sha512": "0h1Q5lNOLLyYTWMJmyNoMqhY4CBRvvUWvJP1R4F2CnmmzuWwvB0A8aVmw5+lOuwYnwUwCRrdeMLbc81F38ahNQ==",
+      "type": "package",
+      "path": "fluentvalidation/11.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.5.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.5.1": {
+      "sha512": "iWM0LS1MDYX06pcjMEQKqHirl2zkjHlNV23mEJSoR1IZI7KQmTa0RcTtGEJpj5+iHvBCfrzP2mYKM4FtRKVb+A==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
     "MediatR/12.0.0": {
       "sha512": "1XodBmbn3I1y7T0iSCSl9sQqHOx/BF63GqWb7mtMQja9ESUk7QrcmzzJFOGie9ruSC7A/oaW/8TwaJLuA9RQRw==",
       "type": "package",
@@ -1955,17 +2063,17 @@
         "mediatr.extensions.nuspec"
       ]
     },
-    "MediatR.Extensions.Autofac.DependencyInjection/9.2.0": {
-      "sha512": "3dvqXu08XYy90ctwuhkX2NlHOKHB75UZDf14q1mn4xIcyptrMW/Yn2E6SVS+kGQ5wxufodU/cOqyPVUKNk9IXA==",
+    "MediatR.Extensions.Autofac.DependencyInjection/10.0.0": {
+      "sha512": "3p8Wx0Er/naxf2MMODLQnWBgYqwyN/64PxVgFvpG4a3vHEIHts1H1cD3p0lQsWYvmpUwrIFN/dpf+RWp3hz5iA==",
       "type": "package",
-      "path": "mediatr.extensions.autofac.dependencyinjection/9.2.0",
+      "path": "mediatr.extensions.autofac.dependencyinjection/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "icon.png",
-        "lib/netstandard2.1/MediatR.Extensions.Autofac.DependencyInjection.dll",
-        "lib/netstandard2.1/MediatR.Extensions.Autofac.DependencyInjection.pdb",
-        "mediatr.extensions.autofac.dependencyinjection.9.2.0.nupkg.sha512",
+        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.dll",
+        "lib/netstandard2.0/MediatR.Extensions.Autofac.DependencyInjection.pdb",
+        "mediatr.extensions.autofac.dependencyinjection.10.0.0.nupkg.sha512",
         "mediatr.extensions.autofac.dependencyinjection.nuspec"
       ]
     },
@@ -3148,6 +3256,44 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Npgsql/6.0.9": {
+      "sha512": "uRZ/Fq8SWG0bjdRNkPRyyFp1kMoafJcRhsSLbn3mNA3OpxgKrIrFTI4OpshvkFDiRBAy0NqduSCOkF6S856Sew==",
+      "type": "package",
+      "path": "npgsql/6.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Npgsql.dll",
+        "lib/net5.0/Npgsql.xml",
+        "lib/net6.0/Npgsql.dll",
+        "lib/net6.0/Npgsql.xml",
+        "lib/netcoreapp3.1/Npgsql.dll",
+        "lib/netcoreapp3.1/Npgsql.xml",
+        "lib/netstandard2.0/Npgsql.dll",
+        "lib/netstandard2.0/Npgsql.xml",
+        "lib/netstandard2.1/Npgsql.dll",
+        "lib/netstandard2.1/Npgsql.xml",
+        "npgsql.6.0.9.nupkg.sha512",
+        "npgsql.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.8": {
+      "sha512": "YJRpO+3wXQyWuwRUCVJj/Rsn46sY0bZ6uCGOEFApiRe0ZYJ6N6TxZUWKbTNJYjesickcLGzynOerpSbDJX1AYg==",
+      "type": "package",
+      "path": "npgsql.entityframeworkcore.postgresql/6.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll",
+        "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.xml",
+        "npgsql.entityframeworkcore.postgresql.6.0.8.nupkg.sha512",
+        "npgsql.entityframeworkcore.postgresql.nuspec",
+        "postgresql.png"
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
@@ -4792,19 +4938,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salov\\.nuget\\packages\\": {}
+    "C:\\Users\\sasha\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
+      "projectUniqueName": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
       "projectName": "WalletService.WebApi",
-      "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
-      "packagesPath": "C:\\Users\\salov\\.nuget\\packages\\",
-      "outputPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.WebApi\\obj\\",
+      "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\WalletService.WebApi.csproj",
+      "packagesPath": "C:\\Users\\sasha\\.nuget\\packages\\",
+      "outputPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.WebApi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\salov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4818,14 +4969,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Application\\WalletService.Application.csproj"
             },
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.Domain\\WalletService.Domain.csproj"
             },
-            "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj": {
-              "projectPath": "D:\\github\\EvoServices\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj"
+            "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj": {
+              "projectPath": "C:\\EVO\\Services\\WalletService\\Wallet.backend\\Wallet.infrastructure\\WalletService.infrastructure.csproj"
             }
           }
         }

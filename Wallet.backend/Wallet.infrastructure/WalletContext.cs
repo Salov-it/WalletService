@@ -8,9 +8,10 @@ namespace WalletService.infrastructure
 {
     public class WalletContext : DbContext, IWalletContext
     {
-      
        public DbSet<Wallet> Wallets { get; set; }
-       public WalletContext() => Database.EnsureCreated();
+
+
+
        protected override void OnModelCreating(ModelBuilder modelBuilder)
        {
             modelBuilder.ApplyConfiguration(new Config());
