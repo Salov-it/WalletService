@@ -21,6 +21,7 @@ namespace WalletService.Application.CQRS.Command.Create
                 ownerId = request.OwnerId,
                 balance = 0,
                 createdAt = DateTime.Now.ToLocalTime().ToString(),
+                updatedAt = DateTime.Now.ToLocalTime().ToString()
             };
             await _walletContext.Wallets.AddAsync(content, cancellationToken);
             await _walletContext.SaveChangesAsync(cancellationToken);

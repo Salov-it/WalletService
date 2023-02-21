@@ -18,7 +18,7 @@ namespace WalletService.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromHeader] int ownerId)
+        public async Task<IActionResult> Create([FromBody] int ownerId)
         {
             var content = new CreateWalletСommand
             {
@@ -29,7 +29,7 @@ namespace WalletService.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetByOwner([FromQuery] int ownerId)
+        public async Task<IActionResult> GetByOwner( int ownerId)
         {
             var content = new GetByOwnerQuerry
             {

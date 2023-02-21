@@ -12,15 +12,15 @@ namespace WalletService.infrastructure
         {
             var connectionString = config["DbConnection"];
 
-
+            IWalletContext _context;
             switch(config["DbType"])
             {
                 case "InMemory":
                     {
-                        var opt = new DbContextOptionsBuilder<WalletContext>()
-                        .UseInMemoryDatabase("1")
-                         .Options;
-                        var context = new WalletContext(opt);
+                        services.AddDbContext<WalletContext>(opt =>
+                        {
+                            opt.UseInMemoryDatabase("1");
+                        });
                         break;
                     }
                 case "Postgres":
