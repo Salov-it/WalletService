@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WalletService.Application.Interface;
 
+
 namespace WalletService.infrastructure
 {
     public static class DependencyInjection
@@ -27,6 +28,14 @@ namespace WalletService.infrastructure
                         services.AddDbContext<WalletContext>(options =>
                         {
                             options.UseNpgsql(connectionString);
+                        });
+                        break;
+                    }
+                case "SQLite":
+                    {
+                        services.AddDbContext<WalletContext>(options =>
+                        {
+                            options.UseSqlite(connectionString);
                         });
                         break;
                     }
