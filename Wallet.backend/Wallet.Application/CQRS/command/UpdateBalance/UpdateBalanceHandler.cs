@@ -4,12 +4,12 @@ using WalletService.Domain;
 using System.Data;
 using WalletService.Application.Interface;
 
-namespace WalletService.Application.CQRS.command.UpdateBalance
+namespace WalletService.Application.CQRS.Command.UpdateBalance
 {
     public class UpdateBalanceHandler : IRequestHandler<UpdateBalanceCommand, Wallet>
     {
 
-        private IWalletContext _context;
+        private readonly IWalletContext _context;
         public UpdateBalanceHandler(IWalletContext context) {
             _context = context;
         }
@@ -19,14 +19,13 @@ namespace WalletService.Application.CQRS.command.UpdateBalance
              
              if (content == null) 
              {
-                //// ERROR
+                // Exception
                 return null;
              }
-
              content.balance = request.balance;
              content.updatedAt = DateTime.Now.ToLocalTime().ToString();
              await _context.SaveChangesAsync(cancellationToken);
-            
+
             return content;
         }
     }

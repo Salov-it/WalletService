@@ -3,7 +3,7 @@ using WalletService.Application.Interface;
 using WalletService.Domain;
 
 
-namespace WalletService.Application.CQRS.command.Create
+namespace WalletService.Application.CQRS.Command.Create
 {
     public class CreateWalletCommandHandler : IRequestHandler<CreateWalletСommand, Wallet>
     {
@@ -13,7 +13,7 @@ namespace WalletService.Application.CQRS.command.Create
         {
             _walletContext = context;
         }
-        private IWalletContext _walletContext;
+        private readonly IWalletContext _walletContext;
         public async Task<Wallet> Handle(CreateWalletСommand request, CancellationToken cancellationToken)
         {
             var content = new Wallet

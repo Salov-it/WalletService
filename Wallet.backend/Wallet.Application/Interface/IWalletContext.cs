@@ -7,6 +7,5 @@ namespace WalletService.Application.Interface
     {
         public DbSet<Wallet> Wallets { get; set; }
         Task<int> SaveChangesAsync(CancellationToken token);
-
     }
 }
