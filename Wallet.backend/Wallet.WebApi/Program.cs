@@ -1,17 +1,22 @@
-using MediatR;
-//using WalletService.Application.CQRS.command.Create;
-
-//using Wallet.Application.CQRS.command.Create;
-//using Wallet.Application.CQRS.command.UpdateBalance;
-//using Wallet.Application.CQRS.Querries;
+using System.Reflection;
+using WalletServic.Application;
+using WalletService.Application.Interface;
+using WalletService.Application.Mapping;
+using WalletService.infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMediatR(typeof(Program)); //Ðåãèñòðàöèÿ ìåäèàòðà
 
-builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+IConfiguration configuration = builder.Configuration;
 
-//builder.Services.AddMediatR(typeof(CreateWalletÑommand)); //ðåãèñòðàöèÿ ÑQRS êîìàíä
+builder.Services.AddAutoMapper(config =>
+{
+    config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
+    config.AddProfile(new AssemblyMappingProfile(typeof(IWalletContext).Assembly));
+
+});
+builder.Services.AddApplication();
+builder.Services.AddPersistance(configuration);
 
 
 builder.Services.AddControllers();
@@ -20,7 +25,21 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var serviseProvider = scope.ServiceProvider;
+    try
+    {
+        var context = serviseProvider.GetRequiredService<WalletContext>();
+        DbInit.init(context);
+    }
+    catch (Exception ex)
+    {
+
+    }
+};
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -29,10 +48,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+if (builder.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+app.UseRouting();
 
-//app.UseHttpsRedirection();
-//.UseAuthorization();
-
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();
